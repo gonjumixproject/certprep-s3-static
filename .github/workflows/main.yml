@@ -33,4 +33,4 @@ jobs:
         run: |
           aws sts get-caller-identity
       - name: Copy the index.html
-        run: aws sync ./ s3://githubtos3static exclude="*" include="index.html"
+        run: aws s3 sync ./ s3://githubtos3static exclude="*" include="index.html"
